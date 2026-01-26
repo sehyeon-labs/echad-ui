@@ -1,0 +1,12 @@
+._index_layout {
+  margin: 0 auto;
+  width: 330px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+  ._index_layout {
+    width: 100%;
+    padding: 0 50px;
+  }
+}
