@@ -10,6 +10,7 @@ function App() {
     <div className='app'>
       <Routes>
         <Route index element={<PageRoutes.IndexPage/>}/>
+        <Route path={PATH.INVITATION} element={<PageRoutes.Invitation/>}/>
       </Routes>
     </div>
   )
