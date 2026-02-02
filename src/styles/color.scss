@@ -8,11 +8,12 @@
   --color-sky-blue: #7EB6FF;
   --color-black: #000000;
   --color-gray: #5F5F5F;
+  --color-gray-light: #A0A0A0;
   --color-white: #FFFFFF;
   
   /** DARK MODE */
   --color-dark-1: #212121;
-  --color-dark-2: #303030;
+  --color-dark-2: #606060;
   --color-dark-opacity: #212121a5;
   
   /** BORDER */
@@ -23,4 +24,7 @@
   
   /** BACKGROUND */
   --color-bg-1: #DBDBDB;
+
+  /** FONT */
+  --color-font-black: #666666;
 }

@@ -9,8 +9,9 @@ function App() {
   return (
     <div className='app'>
       <Routes>
-        <Route index element={<PageRoutes.IndexPage/>}/>
-        <Route path={PATH.INVITATION} element={<PageRoutes.Invitation/>}/>
+        <Route index element={<PageRoutes.Dashboard/>}/>
+        <Route path={PATH.LOGIN} element={<PageRoutes.Login/>}/>
+        <Route path={PATH.INDEX} element={<PageRoutes.IndexPage/>}/>
       </Routes>
     </div>
   )

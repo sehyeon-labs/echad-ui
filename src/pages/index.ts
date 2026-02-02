@@ -1,15 +1,18 @@
 import type { FC } from "react";
 import IndexPage from '@/pages/page';
-import Invitation from '@/pages/invitation';
+import Login from '@/pages/login';
+import Dashboard from '@/pages/dashboard';
 
 interface PageComponents {
+  Login: FC;
+  Dashboard: FC;
   IndexPage: FC;
-  Invitation: FC;
 }
 
 const PageRoutes: PageComponents = {
   IndexPage,
-  Invitation
+  Login,
+  Dashboard,
 }
 
 export default PageRoutes;

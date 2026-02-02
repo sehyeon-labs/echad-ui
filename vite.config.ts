@@ -14,19 +14,19 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-		  port: parseInt(env.VITE_PORT) || 5173,
-		  proxy: {
-		    '/ws': {
-		      target: env.VITE_WS_URL || 'ws://localhost:8080',
-		      changeOrigin: true,
-		      ws: true,
-		    },
-		    '/api': {
+      port: parseInt(env.VITE_PORT) || 5173,
+      proxy: {
+        '/ws': {
+          target: env.VITE_WS_URL || 'ws://localhost:8080',
+          changeOrigin: true,
+          ws: true,
+        },
+        '/api': {
 		      target: env.VITE_API_URL || 'http://localhost:8080',
 		      changeOrigin: true,
-		      rewrite: (path) => path.replace(/^\/api/, ''),
+          rewrite: (path) => path,
 		    },
-		  },
-		},
+      },
+    },
   };
 });
