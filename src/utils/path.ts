@@ -1,12 +1,14 @@
 
 interface PathComponents {
   INDEX: string;
-  INVITATION: string;
+  LOGIN: string;
+  DASHBOARD: string;
 }
 
 export const PATH: PathComponents = {
-  INDEX: '/',
-  INVITATION: '/wedding/:slug',
+  INDEX: '/index',
+  LOGIN: '/login',
+  DASHBOARD: '/'
 }
 
 export const deployHostName: string = import.meta.env.VITE_DEPLOY_HOSTNAME || 'http://localhost:5173';
