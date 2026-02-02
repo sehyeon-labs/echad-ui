@@ -5,12 +5,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-
+  padding: 50px 30px;
+  
+  
   .logo {
     width: 100px;
     height: auto;
   }
+
+  .divider {
+    margin-left: 50px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 20px;
+  
+    .divider_item {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-font-black);
+      cursor: pointer;
+  
+      &:hover {
+        color: var(--color-sky-blue);
+      }
+    }
+  } 
 
   .right_menu {
     display: flex;
@@ -29,4 +50,20 @@
       }
     }
   }
+}
+
+@media (max-width: 500px) {
+  .header {
+    
+    .divider {
+      display: none;
+    }
+
+    .right_menu {
+      .btn {
+        display: none;
+      }
+    }
+  }
+  
 }

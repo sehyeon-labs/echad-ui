@@ -47,6 +47,14 @@ const Header = () => {
           className={styles.logo}
         />
 
+        <div className={styles.divider}>
+          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>제작</div>
+          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>방명록</div>
+          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>갤러리</div>
+          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>공지사항</div>
+          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>설정</div>
+        </div>
+
         <div className={styles.right_menu}>
 
           <div className={styles.user_info} >
@@ -62,6 +70,7 @@ const Header = () => {
           </div>
         </div>
       </div>
+
     </>
   );
 };
