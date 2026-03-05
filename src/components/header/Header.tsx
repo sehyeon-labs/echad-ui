@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import styles from './Header.module.scss';
 import logo from '@/assets/logo-text.png';
 import logoDark from '@/assets/logo-text-dark.png';
@@ -11,10 +12,42 @@ import { useModal } from '@/hooks/modal/useModal';
 import { useAuth } from '@/context/auth/AuthContext';
 import { PATH } from '@/utils/path';
 
-const Header = () => {
+const Header: React.FC = () => {
   const navigate = useNavigate();
   const isDarkMode = useDarkMode();
   const { user, logout } = useAuth();
+
+  const [isClicked, setIsClicked] = React.useState('');
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    switch (currentPath) {
+      case PATH.PLAN:
+        setIsClicked('PLAN');
+        break;
+      case PATH.EDITOR:
+        setIsClicked('EDITOR');
+        break;
+      case PATH.GUESTBOOK:
+        setIsClicked('GUESTBOOK');
+        break;
+      case PATH.GALLERY:
+        setIsClicked('GALLERY');
+        break;
+      case PATH.NOTICE:
+        setIsClicked('NOTICE');
+        break;
+      case PATH.SETTING:
+        setIsClicked('SETTING');
+        break;
+      default:
+        setIsClicked('');
+    }
+  }, [navigate]);
+
+  const handleClickedMenu = (path: keyof typeof PATH) => {
+    navigate(PATH[path]);
+  }
   
   const handleLogout = async () => {
     openModal();
@@ -48,11 +81,11 @@ const Header = () => {
         />
 
         <div className={styles.divider}>
-          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>제작</div>
-          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>방명록</div>
-          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>갤러리</div>
-          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>공지사항</div>
-          <div className={styles.divider_item} onClick={() => navigate(PATH.DASHBOARD)}>설정</div>
+          <div className={`${isClicked == 'PLAN' ? styles.active : ''} ${styles.divider_item}`} onClick={() => handleClickedMenu('PLAN')}>계획</div>
+          <div className={`${isClicked == 'EDITOR' ? styles.active : ''} ${styles.divider_item}`} onClick={() => handleClickedMenu('EDITOR')}>청첩장</div>
+          <div className={`${isClicked == 'GALLERY' ? styles.active : ''} ${styles.divider_item}`} onClick={() => handleClickedMenu('GALLERY')}>관리</div>
+          <div className={`${isClicked == 'NOTICE' ? styles.active : ''} ${styles.divider_item}`} onClick={() => handleClickedMenu('NOTICE')}>공지사항</div>
+          <div className={`${isClicked == 'SETTING' ? styles.active : ''} ${styles.divider_item}`} onClick={() => handleClickedMenu('SETTING')}>설정</div>
         </div>
 
         <div className={styles.right_menu}>

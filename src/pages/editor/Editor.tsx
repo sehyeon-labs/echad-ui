@@ -1,9 +1,9 @@
-import styles from './Dashboard.module.scss';
+import styles from './Editor.module.scss';
 import React from 'react';
 import ContentLayout from '@/layouts/ContentLayout';
 import MainLayout from '@/layouts/MainLayout';
 
-const Dashboard : React.FC = () => {
+const Editor: React.FC = () => {
   return (
     <MainLayout>
       <ContentLayout>
@@ -15,4 +15,4 @@ const Dashboard : React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default Editor;

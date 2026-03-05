@@ -14,12 +14,10 @@
   }
 
   .divider {
-    margin-left: 50px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
     gap: 30px;
-    padding-left: 20px;
   
     .divider_item {
       font-size: 0.9rem;
@@ -30,6 +28,11 @@
       &:hover {
         color: var(--color-sky-blue);
       }
+    }
+
+    .active {
+      color: var(--color-sky-blue);
+      font-weight: 700;
     }
   } 
 
@@ -65,5 +68,18 @@
       }
     }
   }
-  
+}
+
+
+/** DARK MODE */
+@media (prefers-color-scheme: dark) {
+  .header {
+    .divider .divider_item, .right_menu .user_info {
+      color: var(--color-white);
+    }
+
+    .divider .active {
+      color: var(--color-sky-blue);
+    }
+  }
 }
