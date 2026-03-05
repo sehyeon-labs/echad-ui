@@ -16,7 +16,7 @@ import logoImgDark from '@/assets/logo-text-dark.png';
 const Login: React.FC = () => {
   const isDarkMode = useDarkMode()
   
-  const { login, logout } = useAuth();
+  const { login } = useAuth();
   
   const navigate = useNavigate();
 

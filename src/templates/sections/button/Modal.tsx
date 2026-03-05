@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Invitation = () => {
+const Modal = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Invitation = () => {
   );
 };
 
-export default Invitation;
+export default Modal;
