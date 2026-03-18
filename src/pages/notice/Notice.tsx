@@ -1,4 +1,3 @@
-import styles from './Notice.module.scss';
 import React from 'react';
 import ContentLayout from '@/layouts/ContentLayout';
 import MainLayout from '@/layouts/MainLayout';

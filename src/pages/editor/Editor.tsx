@@ -1,7 +1,6 @@
-import styles from './Editor.module.scss';
 import React from 'react';
-import ContentLayout from '@/layouts/ContentLayout';
 import MainLayout from '@/layouts/MainLayout';
+import ContentLayout from '@/layouts/ContentLayout';
 
 const Editor: React.FC = () => {
   return (
