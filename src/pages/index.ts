@@ -4,8 +4,6 @@ import Login from '@/pages/login';
 import Dashboard from '@/pages/dashboard';
 import Plan from "@/pages/plan";
 import Editor from '@/pages/editor';
-import Guestbook from '@/pages/guestbook';
-import Gallery from '@/pages/gallery';
 import Notice from '@/pages/notice';
 import Setting from '@/pages/setting';
 
@@ -16,8 +14,6 @@ interface PageComponents {
 
   Plan: FC;
   Editor: FC;
-  Guestbook: FC;
-  Gallery: FC;
   Notice: FC;
   Setting: FC;
 }
@@ -29,8 +25,6 @@ const PageRoutes: PageComponents = {
 
   Plan,
   Editor,
-  Guestbook,
-  Gallery,
   Notice,
   Setting,
 }

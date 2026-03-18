@@ -1,4 +1,3 @@
-import styles from './Dashboard.module.scss';
 import React from 'react';
 import ContentLayout from '@/layouts/ContentLayout';
 import MainLayout from '@/layouts/MainLayout';

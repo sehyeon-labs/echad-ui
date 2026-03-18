@@ -1,0 +1,34 @@
+.editor_container {
+  display: flex;
+  height: calc(100vh - 60px); // subtract header height
+  overflow: hidden;
+}
+
+.panel_group {
+  width: 100%;
+  height: 100%;
+}
+
+.preview_panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: var(--color-bg-gray);
+}
+
+.control_panel {
+  overflow: auto;
+  background-color: var(--color-whtie);
+}
+
+.resizer {
+  width: 8px;
+  background-color: var(--color-border-5);
+  cursor: col-resize;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--color-border-6);
+  }
+}
