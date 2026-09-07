@@ -9,7 +9,14 @@ function App() {
   return (
     <div className='app'>
       <Routes>
-        <Route index element={<PageRoutes.IndexPage/>}/>
+        <Route index element={<PageRoutes.Dashboard/>}/>
+        <Route path={PATH.LOGIN} element={<PageRoutes.Login/>}/>
+        <Route path={PATH.INDEX} element={<PageRoutes.IndexPage/>}/>
+
+        <Route path={PATH.PLAN} element={<PageRoutes.Plan/>}/>
+        <Route path={PATH.EDITOR} element={<PageRoutes.Editor/>}/>
+        <Route path={PATH.NOTICE} element={<PageRoutes.Notice/>}/>
+        <Route path={PATH.SETTING} element={<PageRoutes.Setting/>}/>
       </Routes>
     </div>
   )
